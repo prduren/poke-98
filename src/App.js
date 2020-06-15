@@ -5,33 +5,15 @@
 // map over and display in card.js, reference old projects
 import React from "react";
 import "98.css";
-import styled from "styled-components";
 import "./styles/reset.css";
-import Card from "./Card";
-
-const MainWrapper = styled.div`
-  height: 100vh;
-  width: 100vw;
-  text-align: center;
-  align-content: center;
-`;
-
-const WelcomeDiv = styled.div`
-  height: 10rem;
-  width: 60rem;
-  display: inline-block;
-  font-size: 2rem;
-  background: #c8c8c8;
-`;
-
-const ContentWrapper = styled.div`
-  width: 70%;
-  margin: 0 auto;
-`;
+import Card from "./components/Card";
+import Aside from "./components/Aside";
+import { MainWrapper, WelcomeDiv, ContentWrapper } from "./styles/style";
 
 function App() {
   return (
     <MainWrapper>
+      <Aside />
       <ContentWrapper>
         <header>
           <WelcomeDiv className="window">
@@ -44,7 +26,7 @@ function App() {
               </div>
             </div>
             <div className="window-body">
-              <p>Welcome to Poke 98!</p>
+              <p>Welcome to Poké-98!</p>
             </div>
           </WelcomeDiv>
         </header>
