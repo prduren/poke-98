@@ -54,7 +54,7 @@ function App() {
               .filter((obj) => obj.language.name === "en")
               .filter((obj) => obj.version.name === "yellow");
             console.log("desc: ", desc);
-            setDescription(desc[0].flavor_text);
+            setDescription(desc[0].flavor_text.replace("\u000c", " "));
             console.log(response.data);
           })
           .catch((error) => {
@@ -72,15 +72,15 @@ function App() {
       <ContentWrapper>
         <header>
           <WelcomeDiv className="window">
-            <div class="title-bar">
-              <div class="title-bar-text">xoxo</div>
-              <div class="title-bar-controls">
+            <div className="title-bar">
+              <div className="title-bar-text">xoxo</div>
+              <div className="title-bar-controls">
                 <button aria-label="Minimize"></button>
                 <button aria-label="Maximize"></button>
                 <button aria-label="Close"></button>
               </div>
             </div>
-            <div class="window-body">
+            <div className="window-body">
               <p>Welcome to Poke 98!</p>
             </div>
           </WelcomeDiv>
