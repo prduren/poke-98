@@ -3,6 +3,8 @@ import { MainWrapper, WelcomeDiv, ContentWrapper } from "../styles/style";
 import "98.css";
 import "../styles/reset.css";
 import Aside from "../components/Aside";
+import windowsPic from "../images/windows.gif";
+import yahooPic from "../images/yahoo-1996.jpg";
 
 function Layout({ children }) {
   return (
@@ -25,6 +27,16 @@ function Layout({ children }) {
           </WelcomeDiv>
         </header>
         {children}
+        <img
+          style={{ margin: "2rem", border: "2px solid black" }}
+          src={yahooPic}
+          alt="yahoo ad"
+        />
+        <img
+          style={{ margin: "2rem", border: "2px solid black" }}
+          src={windowsPic}
+          alt="windows ad"
+        />
       </ContentWrapper>
     </MainWrapper>
   );
