@@ -1,4 +1,3 @@
-// how and why do i use this history thingy
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
