@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
 
-function NormalPage() {
+function FightingPage() {
   const [pokemon, setPokemon] = useState([]);
   const [sprites, setSprites] = useState([]);
   useEffect(() => {
     axios
-      .get("https://pokeapi.co/api/v2/type/1/")
+      .get("https://pokeapi.co/api/v2/type/2/")
       .then((response) => {
-        setPokemon(response.data.pokemon.slice(0, 22));
+        setPokemon(response.data.pokemon.slice(0, 8));
       })
       .then(
         axios.get("https://pokeapi.co/api/v2/pokemon/16/").then((response) => {
@@ -19,11 +19,11 @@ function NormalPage() {
   }, []);
 
   return (
-    <Route path="/normal">
+    <Route path="/fighting">
       <div>{pokemon.map((pokemon) => pokemon.pokemon.name + " ")}</div>
       <img src={sprites} alt="sprite" />
     </Route>
   );
 }
 
-export default NormalPage;
+export default FightingPage;
