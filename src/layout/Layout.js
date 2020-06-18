@@ -1,5 +1,11 @@
 import React from "react";
-import { MainWrapper, WelcomeDiv, ContentWrapper } from "../styles/style";
+import {
+  MainWrapper,
+  WelcomeDiv,
+  ContentWrapper,
+  HorizontalLine,
+  Header,
+} from "../styles/style";
 import "98.css";
 import "../styles/reset.css";
 import Aside from "../components/Aside";
@@ -11,7 +17,7 @@ function Layout({ children }) {
     <MainWrapper>
       <Aside />
       <ContentWrapper>
-        <header>
+        <Header>
           <WelcomeDiv className="window">
             <div className="title-bar">
               <div className="title-bar-text">xoxo</div>
@@ -25,7 +31,8 @@ function Layout({ children }) {
               <p>Poké-98!</p>
             </div>
           </WelcomeDiv>
-        </header>
+          <HorizontalLine></HorizontalLine>
+        </Header>
         {children}
         <img
           style={{ margin: "2rem", border: "2px solid black" }}

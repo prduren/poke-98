@@ -9,7 +9,7 @@ export const AsideWrapper = styled.div`
 `;
 
 export const MainWrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   text-align: center;
   align-content: center;
@@ -46,4 +46,36 @@ export const CardWrapper = styled.div`
     height: 30rem;
     border: 10px solid black;
   }
+`;
+
+export const TypeCardWrapper = styled.div`
+  width: 25%;
+  text-align: center;
+  display: inline-block;
+`;
+
+export const HorizontalLine = styled.hr`
+  margin: 3rem auto;
+  border: none;
+  width: 70rem;
+  height: 5px;
+  opacity: 0.5;
+  background: linear-gradient(
+    to right,
+    red 20%,
+    yellow 20%,
+    yellow 36%,
+    green 36%,
+    green 60%,
+    blue 60%,
+    blue 100%
+  );
+`;
+
+export const Header = styled.header`
+  text-align: center;
+  justify-items: center;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
 `;

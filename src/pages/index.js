@@ -3,7 +3,7 @@ import Card from "../components/Card";
 
 function IndexPage() {
   return (
-    <div>
+    <div style={{ height: "77vh" }}>
       <Card />
     </div>
   );
