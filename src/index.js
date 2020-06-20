@@ -1,10 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import { Router } from "react-router-dom";
-import { createBrowserHistory } from "history";
-import { Provider } from "react-redux";
-import store from "./store";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const history = createBrowserHistory();
 
@@ -16,5 +16,5 @@ ReactDOM.render(
       </Router>
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
