@@ -29,7 +29,7 @@ function Card() {
               .filter((obj) => obj.version.name === "yellow");
             console.log("desc: ", desc);
             setDescription(desc[0].flavor_text.replace("\u000c", " "));
-            console.log(response.data);
+            console.log("data", response.data);
           })
           .catch((error) => {
             console.log("error 2! here it is: ", error);

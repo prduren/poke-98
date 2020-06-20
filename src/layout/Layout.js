@@ -5,6 +5,7 @@ import {
   ContentWrapper,
   HorizontalLine,
   Header,
+  Contact,
 } from "../styles/style";
 import "98.css";
 import "../styles/reset.css";
@@ -44,6 +45,15 @@ function Layout({ children }) {
           src={windowsPic}
           alt="windows ad"
         />
+        <Contact style={{ position: "fixed", bottom: "0", right: "0" }}>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/prduren/poke-98"
+          >
+            <button>github</button>
+          </a>
+        </Contact>
       </ContentWrapper>
     </MainWrapper>
   );

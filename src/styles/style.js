@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const AsideWrapper = styled.div`
+  height: 100%;
   ul {
+    height: 70%;
     width: 70%;
     text-align: left;
     font-size: 2rem;
@@ -31,6 +33,7 @@ export const WelcomeDiv = styled.div`
   display: inline-block;
   font-size: 2rem;
   background: #c8c8c8;
+  margin-top: 3rem;
 `;
 
 export const ContentWrapper = styled.div`
@@ -68,7 +71,8 @@ export const HorizontalLine = styled.hr`
     green 36%,
     green 60%,
     blue 60%,
-    blue 100%
+    blue 80%,
+    orange 80%
   );
 `;
 
@@ -78,4 +82,10 @@ export const Header = styled.header`
   justify-self: center;
   align-items: center;
   align-self: center;
+`;
+
+export const Contact = styled.div`
+  position: fixed;
+  bottom: 5;
+  right: 5;
 `;

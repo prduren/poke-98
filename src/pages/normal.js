@@ -170,6 +170,7 @@ function NormalPage() {
   const nameArray = names.map((name) => {
     return name.name;
   });
+
   console.log("nameArray: ", nameArray);
   return (
     <Route path="/normal">
@@ -180,6 +181,7 @@ function NormalPage() {
             <TypeCardWrapper>
               <img src={sprite} alt="sprite" />
               <h3>name</h3>
+              <h4>description</h4>
             </TypeCardWrapper>
           );
         })}
