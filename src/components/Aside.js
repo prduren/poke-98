@@ -1,14 +1,14 @@
-import React from "react";
-import "98.css";
-import Link from "./Link";
-import { useHistory } from "react-router-dom";
-import { AsideWrapper } from "../styles/style";
+import React from 'react';
+import '98.css';
+import Link from './Link';
+import { useHistory } from 'react-router-dom';
+import { AsideWrapper } from '../styles/style';
 
 function Aside() {
   const history = useHistory();
 
   function goHome() {
-    history.push("/");
+    history.push('/');
   }
   return (
     <AsideWrapper>
@@ -22,49 +22,49 @@ function Aside() {
           <li>
             All Pokémon
             <ul>
-              <Link to="/normal">
+              <Link to="/type/normal">
                 <li>Normal</li>
               </Link>
-              <Link to="/fire">
+              <Link to="/type/fire">
                 <li>Fire</li>
               </Link>
-              <Link to="/water">
+              <Link to="/type/water">
                 <li>Water</li>
               </Link>
-              <Link to="/grass">
+              <Link to="/type/grass">
                 <li>Grass</li>
               </Link>
-              <Link to="/electric">
+              <Link to="/type/electric">
                 <li>Electric</li>
               </Link>
-              <Link to="/ice">
+              <Link to="/type/ice">
                 <li>Ice</li>
               </Link>
-              <Link to="/fighting">
+              <Link to="/type/fighting">
                 <li>Fighting</li>
               </Link>
-              <Link to="/poison">
+              <Link to="/type/poison">
                 <li>Poison</li>
               </Link>
-              <Link to="/ground">
+              <Link to="/type/ground">
                 <li>Ground</li>
               </Link>
-              <Link to="/flying">
+              <Link to="/type/flying">
                 <li>Flying</li>
               </Link>
-              <Link to="/psychic">
+              <Link to="/type/psychic">
                 <li>Psychic</li>
               </Link>
-              <Link to="/bug">
+              <Link to="/type/bug">
                 <li>Bug</li>
               </Link>
-              <Link to="/rock">
+              <Link to="/type/rock">
                 <li>Rock</li>
               </Link>
-              <Link to="/ghost">
+              <Link to="/type/ghost">
                 <li>Ghost</li>
               </Link>
-              <Link to="/dragon">
+              <Link to="/type/dragon">
                 <li>Dragon</li>
               </Link>
             </ul>
