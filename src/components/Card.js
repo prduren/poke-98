@@ -12,7 +12,7 @@ const pokeId = () => {
 
 function Card() {
   const [description, setDescription] = useState("");
-  const [pokemon, setPokemon] = useState({});
+  const [pokemon, setPokemon] = useState([]);
 
   // this call is for the pokemon name
   useEffect(() => {
@@ -40,6 +40,7 @@ function Card() {
         console.log("error 1! here it is: ", error);
       });
   }, []);
+
   return (
     <CardWrapper>
       <section className="pokemonCard">

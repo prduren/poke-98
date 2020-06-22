@@ -44,17 +44,33 @@ export const ContentWrapper = styled.div`
 export const CardWrapper = styled.div`
   background: linear-gradient(#e66465, #9198e5);
   padding: 1rem;
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+    inset -2px -2px #808080, inset 2px 2px #dfdfdf;
   img {
     width: 30rem;
     height: 30rem;
-    border: 10px solid black;
+    /* border: 10px solid black; */
+    /* background: white; */
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+      inset -2px -2px #808080, inset 2px 2px #dfdfdf;
   }
 `;
 
 export const TypeCardWrapper = styled.div`
-  width: 25%;
+  width: 100%;
   text-align: center;
   display: inline-block;
+  .card {
+    margin: 2rem;
+    display: inline-block;
+    background: white;
+    /* this is the css shadow for the 98 css style div */
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+      inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+  }
+  .name {
+    margin: 0.5rem;
+  }
 `;
 
 export const HorizontalLine = styled.hr`

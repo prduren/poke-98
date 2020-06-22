@@ -1,6 +1,7 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TypeCardWrapper } from "../styles/style";
 export const PokemonTypeList = () => {
   const { type } = useParams();
 
@@ -10,17 +11,20 @@ export const PokemonTypeList = () => {
   if (error) return <div>error</div>;
 
   return (
-    <ul>
+    <TypeCardWrapper>
       {pokemon &&
         pokemon
           .filter((poke) => poke.types[0].type.name === type)
           .map((poke) => (
-            <li key={poke.name}>
-              <div>{poke.name}</div>
+            <div className="card" key={poke.name}>
               <img src={poke.sprites.front_default} alt={poke.name} />
-            </li>
+              <p>#{poke.id}</p>
+              <div className="name">
+                {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
+              </div>
+            </div>
           ))}
-    </ul>
+    </TypeCardWrapper>
   );
 };
 
