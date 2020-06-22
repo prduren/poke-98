@@ -1,22 +1,22 @@
-import React from 'react';
-import '98.css';
-import Link from './Link';
-import { useHistory } from 'react-router-dom';
-import { AsideWrapper } from '../styles/style';
+import React from "react";
+import "98.css";
+import Link from "./Link";
+import { useHistory } from "react-router-dom";
+import { AsideWrapper } from "../styles/style";
 
 function Aside() {
   const history = useHistory();
 
   function goHome() {
-    history.push('/');
+    history.push("/");
   }
   return (
     <AsideWrapper>
       <aside>
         <ul className="tree-view">
           <li>Table of Contents</li>
-          <button onClick={goHome}>
-            <li>Home</li>
+          <button className="homeButton" onClick={goHome}>
+            Home
           </button>
 
           <li>

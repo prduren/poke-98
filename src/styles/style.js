@@ -1,20 +1,5 @@
 import styled from "styled-components";
 
-export const AsideWrapper = styled.div`
-  height: 100%;
-  }
-  ul {
-    @media only screen and (max-width: 800px) {
-    font-size: 1rem;
-    width: 100%;
-}
-    height: 70%;
-    width: 70%;
-    text-align: left;
-    font-size: 2rem;
-  }
-`;
-
 export const MainWrapper = styled.div`
   height: 100%;
   width: 100vw;
@@ -50,7 +35,7 @@ export const ContentWrapper = styled.div`
 
 export const CardWrapper = styled.div`
   @media only screen and (max-width: 800px) {
-    width: 30rem;
+    width: 28rem;
     margin-left: 4rem;
   }
   background: linear-gradient(#e66465, #9198e5);
@@ -58,8 +43,8 @@ export const CardWrapper = styled.div`
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
     inset -2px -2px #808080, inset 2px 2px #dfdfdf;
   img {
-    width: 30rem;
-    height: 30rem;
+    width: 28rem;
+    height: 28rem;
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
       inset -2px -2px #808080, inset 2px 2px #dfdfdf;
   }
@@ -123,6 +108,26 @@ export const AdImg = styled.img`
     inset -2px -2px #808080, inset 2px 2px #dfdfdf;
   margin: 2rem;
   @media only screen and (max-width: 800px) {
-    width: 33rem;
+    width: 28rem;
+  }
+`;
+
+export const AsideWrapper = styled.div`
+  height: 100%;
+  .homeButton {
+    transform: translateX(-10px);
+  }
+  ul {
+    height: 70%;
+    width: 70%;
+    text-align: left;
+    font-size: 2rem;
+    @media only screen and (max-width: 800px) {
+      font-size: 1rem;
+      width: 100%;
+      li {
+        margin: 1.5rem 0;
+      }
+    }
   }
 `;
