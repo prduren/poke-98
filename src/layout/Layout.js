@@ -6,6 +6,7 @@ import {
   HorizontalLine,
   Header,
   Contact,
+  AdImg,
 } from "../styles/style";
 import "98.css";
 import "../styles/reset.css";
@@ -35,16 +36,8 @@ function Layout({ children }) {
           <HorizontalLine></HorizontalLine>
         </Header>
         {children}
-        <img
-          style={{ margin: "2rem", border: "2px solid black" }}
-          src={yahooPic}
-          alt="yahoo ad"
-        />
-        <img
-          style={{ margin: "2rem", border: "2px solid black" }}
-          src={windowsPic}
-          alt="windows ad"
-        />
+        <AdImg src={yahooPic} alt="yahoo ad" />
+        <AdImg src={windowsPic} alt="windows ad" />
         <Contact style={{ position: "fixed", bottom: "0", right: "0" }}>
           <a
             target="_blank"

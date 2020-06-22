@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 export const AsideWrapper = styled.div`
   height: 100%;
+  }
   ul {
+    @media only screen and (max-width: 800px) {
+    font-size: 1rem;
+    width: 100%;
+}
     height: 70%;
     width: 70%;
     text-align: left;
@@ -16,6 +21,8 @@ export const MainWrapper = styled.div`
   text-align: center;
   align-content: center;
   background: rgb(192, 192, 192);
+  @media only screen and (max-width: 800px) {
+  }
   aside {
     width: 14%;
     position: fixed;
@@ -42,6 +49,10 @@ export const ContentWrapper = styled.div`
 `;
 
 export const CardWrapper = styled.div`
+  @media only screen and (max-width: 800px) {
+    width: 30rem;
+    margin-left: 4rem;
+  }
   background: linear-gradient(#e66465, #9198e5);
   padding: 1rem;
   box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
@@ -49,8 +60,6 @@ export const CardWrapper = styled.div`
   img {
     width: 30rem;
     height: 30rem;
-    /* border: 10px solid black; */
-    /* background: white; */
     box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
       inset -2px -2px #808080, inset 2px 2px #dfdfdf;
   }
@@ -79,6 +88,9 @@ export const HorizontalLine = styled.hr`
   width: 70rem;
   height: 5px;
   opacity: 0.5;
+  @media only screen and (max-width: 800px) {
+    width: 20rem;
+  }
   background: linear-gradient(
     to right,
     red 20%,
@@ -104,4 +116,13 @@ export const Contact = styled.div`
   position: fixed;
   bottom: 5;
   right: 5;
+`;
+
+export const AdImg = styled.img`
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+    inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+  margin: 2rem;
+  @media only screen and (max-width: 800px) {
+    width: 33rem;
+  }
 `;
