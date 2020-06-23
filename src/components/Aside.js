@@ -49,9 +49,6 @@ function Aside() {
               <Link to="/type/ground">
                 <li>Ground</li>
               </Link>
-              <Link to="/type/flying">
-                <li>Flying</li>
-              </Link>
               <Link to="/type/psychic">
                 <li>Psychic</li>
               </Link>
