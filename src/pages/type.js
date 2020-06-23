@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TypeCardWrapper } from "../styles/style";
+
 export const PokemonTypeList = () => {
   const { type } = useParams();
 
@@ -22,6 +23,7 @@ export const PokemonTypeList = () => {
               <div className="name">
                 {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
               </div>
+              <div className="weight">{poke.weight / 10} kg</div>
             </div>
           ))}
     </TypeCardWrapper>
