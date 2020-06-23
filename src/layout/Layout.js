@@ -16,11 +16,11 @@ import yahooPic from "../images/yahoo-1996.jpg";
 import iePic from "../images/ie.gif";
 import spacePic from "../images/space.gif";
 
-// function getRandomImageId() {
-//   const min = 0;
-//   const max = 3;
-//   return Math.floor(Math.random() * (max - min)) + min;
-// }
+function getRandomImageId() {
+  const min = 0;
+  const max = 3;
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 const images = [spacePic, iePic, yahooPic, windowsPic];
 
@@ -28,11 +28,11 @@ function Layout({ children }) {
   // state for ad images
   const [advertisement, setAdvertisement] = useState({ current: 0 });
 
-  // setInterval(function () {
-  //   setAdvertisement({
-  //     current: getRandomImageId(),
-  //   });
-  // }, 200000);
+  setInterval(function () {
+    setAdvertisement({
+      current: getRandomImageId(),
+    });
+  }, 200000);
 
   return (
     <MainWrapper>
