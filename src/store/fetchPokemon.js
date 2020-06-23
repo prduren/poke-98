@@ -1,8 +1,12 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { FETCH_POKEMON_START, FETCH_POKEMON_SUCCESS, FETCH_POKEMON_FAILURE } from './store';
-import Axios from 'axios';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  FETCH_POKEMON_START,
+  FETCH_POKEMON_SUCCESS,
+  FETCH_POKEMON_FAILURE,
+} from "./store";
+import Axios from "axios";
 
 const fetchPokemon = () => {
   const { loading, pokemon, error } = useSelector((store) => store);
@@ -14,10 +18,11 @@ const fetchPokemon = () => {
 
     // ! ONLY call api if you need to
     if (!loading && !pokemon && !error)
-      Axios.get('https://pokeapi.co/api/v2/pokemon?limit=151')
+      Axios.get("https://pokeapi.co/api/v2/pokemon?limit=151")
         .then(async (res) => {
-          const pokemon = await Axios.all(res.data.results.map(getPokemonDetails));
-          console.log('pokemon: ', pokemon);
+          const pokemon = await Axios.all(
+            res.data.results.map(getPokemonDetails)
+          );
 
           dispatch({ type: FETCH_POKEMON_SUCCESS, payload: pokemon });
         })
