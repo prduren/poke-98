@@ -27,18 +27,12 @@ function Card() {
             const desc = response.data.flavor_text_entries
               .filter((obj) => obj.language.name === "en")
               .filter((obj) => obj.version.name === "yellow");
-            console.log("desc: ", desc);
+
             setDescription(desc[0].flavor_text.replace("\u000c", " "));
-            console.log("data", response.data);
           })
-          .catch((error) => {
-            console.log("error 2! here it is: ", error);
-          });
-        console.log(response.data);
+          .catch((error) => {});
       })
-      .catch((error) => {
-        console.log("error 1! here it is: ", error);
-      });
+      .catch((error) => {});
   }, []);
 
   return (
@@ -50,7 +44,7 @@ function Card() {
             pokemon.id +
             ".png"
           }
-          alt="Pokemon Sprite"
+          alt=""
         />
         <h3>#{pokemon.id}</h3>
         <h3>{pokemon.name}</h3>
