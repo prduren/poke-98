@@ -64,6 +64,10 @@ export const TypeCardWrapper = styled.div`
   }
   .name {
     margin: 0.5rem;
+    text-decoration: underline;
+  }
+  .weight {
+    margin-bottom: 0.5rem;
   }
 `;
 
@@ -114,8 +118,10 @@ export const AdImg = styled.img`
 
 export const AsideWrapper = styled.div`
   height: 100%;
-  .homeButton {
-    transform: translateX(-10px);
+  @media only screen and (max-width: 800px) {
+    .homeButton {
+      transform: translateX(-10px);
+    }
   }
   ul {
     height: 70%;
