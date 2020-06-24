@@ -30,6 +30,10 @@ export const WelcomeDiv = styled.div`
 
 export const ContentWrapper = styled.div`
   width: 70%;
+  @media only screen and (max-width: 400px) {
+    width: 100%;
+    margin-left: 3rem;
+  }
   margin: 0 auto;
 `;
 
@@ -44,9 +48,12 @@ export const CardWrapper = styled.div`
     inset -2px -2px #808080, inset 2px 2px #dfdfdf;
   img {
     width: 28rem;
+    margin-top: 2rem;
     height: 28rem;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
-      inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+    /* box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+      inset -2px -2px #808080, inset 2px 2px #dfdfdf; */
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
   }
 `;
 
@@ -54,8 +61,14 @@ export const TypeCardWrapper = styled.div`
   width: 100%;
   text-align: center;
   display: inline-block;
-  .card {
+  .shadowDiv {
+    display: inline-block;
+    box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
     margin: 2rem;
+  }
+  .card {
+    margin: 0rem;
     display: inline-block;
     background: white;
     /* this is the css shadow for the 98 css style div */
@@ -65,6 +78,11 @@ export const TypeCardWrapper = styled.div`
   .name {
     margin: 0.5rem;
     text-decoration: underline;
+    a {
+      color: black;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
   }
   .weight {
     margin-bottom: 0.5rem;
@@ -134,6 +152,45 @@ export const AsideWrapper = styled.div`
       li {
         margin: 1.5rem 0;
       }
+      .typeList {
+        margin-left: 0;
+      }
     }
   }
+`;
+
+export const DetailWrapper = styled.div``;
+
+export const DetailCardWrapper = styled.div`
+  background: white;
+  /* this is the css shadow for the 98 css style div */
+  box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #ffffff,
+    inset -2px -2px #808080, inset 2px 2px #dfdfdf;
+  width: 70%;
+  margin: 3rem auto;
+  text-align: left;
+  padding: 3vw;
+  p {
+    font-size: 1.5rem;
+  }
+  img {
+    width: 20em;
+    height: 20em;
+  }
+`;
+
+export const ContentHR = styled.hr`
+  width: 20%;
+  height: 3px;
+  margin: 0 auto;
+  background: linear-gradient(
+    to left,
+    red 20%,
+    yellow 20%,
+    yellow 36%,
+    green 36%,
+    green 60%,
+    blue 60%,
+    blue 100%
+  );
 `;
