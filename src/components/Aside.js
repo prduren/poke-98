@@ -21,7 +21,7 @@ function Aside() {
 
           <li>
             All Pokémon
-            <ul>
+            <ul className="typeList">
               <Link to="/type/normal">
                 <li>Normal</li>
               </Link>
