@@ -77,6 +77,10 @@ function Layout({ children }) {
           </a>
         </Contact>
       </ContentWrapper>
+      <div style={{ color: "#C0C0C0" }}>
+        {" "}
+        {JSON.stringify(timeLeft, null, 2)}
+      </div>
     </MainWrapper>
   );
 }
