@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "98.css";
-import { CardWrapper } from "../styles/style";
+import { CardWrapper, ContentHR } from "../styles/style";
 
 // get a random number between 1 and 151
 const pokeId = () => {
@@ -37,20 +37,20 @@ function Card() {
 
   return (
     <CardWrapper>
-      <section className="pokemonCard">
-        <img
-          src={
-            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-            pokemon.id +
-            ".png"
-          }
-          alt=""
-        />
-        <h3>#{pokemon.id}</h3>
-        <h3>{pokemon.name}</h3>
-        <h3>{description}</h3>
-        {/* put search form here */}
-      </section>
+      <img
+        src={
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+          pokemon.id +
+          ".png"
+        }
+        alt=""
+      />
+      <h3>#{pokemon.id}</h3>
+      <ContentHR />
+      <h3>{pokemon.name}</h3>
+      <ContentHR />
+      <h3>{description}</h3>
+      {/* put search form here */}
     </CardWrapper>
   );
 }
