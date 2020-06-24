@@ -45,7 +45,6 @@ function Layout({ children }) {
 
   return (
     <MainWrapper>
-      {JSON.stringify(timeLeft, null, 2)}
       <Aside />
       <ContentWrapper>
         <Header>
