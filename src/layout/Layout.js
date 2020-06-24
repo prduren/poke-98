@@ -1,41 +1,51 @@
-import React, { useState } from "react";
-import {
-  MainWrapper,
-  WelcomeDiv,
-  ContentWrapper,
-  HorizontalLine,
-  Header,
-  Contact,
-  AdImg,
-} from "../styles/style";
 import "98.css";
-import "../styles/reset.css";
+import React, { useState } from "react";
 import Aside from "../components/Aside";
-import windowsPic from "../images/windows.gif";
-import yahooPic from "../images/yahoo-1996.jpg";
 import iePic from "../images/ie.gif";
 import spacePic from "../images/space.gif";
+import windowsPic from "../images/windows.gif";
+import yahooPic from "../images/yahoo-1996.jpg";
+import "../styles/reset.css";
+import {
+  AdImg,
+  Contact,
+  ContentWrapper,
+  Header,
+  HorizontalLine,
+  MainWrapper,
+  WelcomeDiv,
+} from "../styles/style";
 
-function getRandomImageId() {
-  const min = 0;
-  const max = 3;
-  return Math.floor(Math.random() * (max - min)) + min;
-}
+const calculateTimeLeft = () => {
+  const difference = +new Date("2020-01-01") - +new Date();
+  let timeLeft = {};
 
-const images = [spacePic, iePic, yahooPic, windowsPic];
+  if (difference > 0) {
+    timeLeft = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
+    };
+  }
 
+  return timeLeft;
+};
 function Layout({ children }) {
   // state for ad images
-  const [advertisement, setAdvertisement] = useState({ current: 0 });
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [ads, setAds] = useState([windowsPic, yahooPic, iePic, spacePic]);
 
-  setInterval(function () {
-    setAdvertisement({
-      current: getRandomImageId(),
-    });
-  }, 200000);
+  React.useEffect(() => {
+    setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+      setAds((current) => current.sort(() => Math.random() - 0.5));
+    }, 5000);
+  });
 
   return (
     <MainWrapper>
+      {JSON.stringify(timeLeft, null, 2)}
       <Aside />
       <ContentWrapper>
         <Header>
@@ -55,8 +65,9 @@ function Layout({ children }) {
           <HorizontalLine></HorizontalLine>
         </Header>
         {children}
-        <AdImg src={images[advertisement.current]} alt="fake advertisement" />
-        <AdImg src={windowsPic} alt="fake advertisement" />
+        {new Array(2).fill(null).map((_, index) => (
+          <AdImg key={`ad-${index}`} src={ads[index]} />
+        ))}
         <Contact style={{ position: "fixed", bottom: "0", right: "0" }}>
           <a
             target="_blank"
