@@ -1,5 +1,7 @@
 ## Poke-98
 
+![poke-98 banner](./src/images/poke-98.png)
+
 This is a create-react-app that utilizes state and multiple API calls to display the original 151 pokemon in a 90s style manner.
 
 ## Technologies
