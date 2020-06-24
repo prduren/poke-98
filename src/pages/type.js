@@ -1,6 +1,6 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 import { TypeCardWrapper } from "../styles/style";
 
 export const PokemonTypeList = () => {
