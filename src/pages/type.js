@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TypeCardWrapper } from "../styles/style";
 
@@ -21,7 +21,9 @@ export const PokemonTypeList = () => {
               <img src={poke.sprites.front_default} alt={poke.name} />
               <p>#{poke.id}</p>
               <div className="name">
-                {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
+                <Link to={`/type/${type}/${poke.id}`}>
+                  {poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}
+                </Link>
               </div>
               <div className="weight">{poke.weight / 10} kg</div>
             </div>
